@@ -1,0 +1,322 @@
+:root {
+  --text:#222;
+  --muted:#666;
+  --bg:#fff;
+  --accent:#bfa37a;
+  --max:1180px;
+}
+
+* {box-sizing:border-box;}
+
+body {
+  margin:0;
+  color:var(--text);
+  background:var(--bg);
+  font-family:-apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft Yahei", sans-serif;
+}
+
+.container {
+  max-width:var(--max);
+  margin:auto;
+  padding:0 20px;
+}
+
+.section {
+  padding:60px 0;
+}
+
+.grid {
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:32px;
+}
+
+img {max-width:100%; display:block;}
+
+.shadow {box-shadow:0 6px 18px rgba(0,0,0,.1);}
+.round {border-radius:14px;}
+
+/* Header */
+.site-header {
+  position:sticky;
+  top:0;
+  background:#fff;
+  box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+.nav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  height:70px;
+}
+.brand {
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+  color:var(--text);
+  font-weight:700;
+}
+.brand img {
+  height:40px;
+  margin-right:10px;
+}
+nav a {
+  margin:0 12px;
+  text-decoration:none;
+  color:var(--text);
+  font-weight:500;
+}
+nav a:hover {color:var(--accent);}
+.social a {
+  margin-left:10px;
+  text-decoration:none;
+  font-size:20px;
+}
+
+/* Hero */
+.hero {
+  height:60vh;
+  min-height:360px;
+  position:relative;
+}
+.hero-img {
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+}
+
+/* Section */
+h2 {
+  margin-bottom:14px;
+  font-size:28px;
+}
+p {
+  margin:0 0 10px;
+  color:var(--muted);
+}
+
+/* Footer */
+.site-footer {
+  background:#111;
+  color:#fff;
+  padding:40px 0;
+  text-align:center;
+}
+.site-footer img {
+  height:50px;
+  filter:invert(1) brightness(1.8);
+  margin-bottom:10px;
+}
+/* 顶部导航栏 */
+.navbar {
+  width: 100%;
+  padding: 15px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #eee;
+}
+
+/* 左侧 Logo */
+.logo img {
+  height: 48px;
+}
+
+/* 中间导航链接 */
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #111;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #888;
+}
+
+/* 右侧社交图标 */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  color: #000;
+  text-decoration: none;
+  transition: transform 0.25s ease, opacity 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.social-icons svg {
+  width: 26px;
+  height: 26px;
+}
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  cursor: pointer;
+}
+
+.social-icons img:hover {
+  transform: scale(1.15);
+  opacity: 0.85;
+}
+/* 顶栏图标样式 */
+.social {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.social img{
+  width: 28px;        
+  height: 28px;
+  display: block;
+}
+
+.social a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .15s ease, opacity .15s ease;
+}
+
+.social a:hover{
+  transform: translateY(-1px);
+  opacity: .85;
+}
+
+/* ========== Base ========== */
+:root{
+  --max: 1200px;
+  --pad: 24px;
+  --bg: #ffffff;
+  --ink: #111;
+  --ink-2:#444;
+  --muted:#f6f7f8;
+  --brand:#111;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial, "PingFang SC", "Microsoft Yahei", sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+}
+
+/* 容器 */
+.container{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.section{padding:72px 0}
+.section-muted{background:var(--muted)}
+h1,h2,h3{line-height:1.25;margin:0 0 16px}
+p{margin:0 0 12px;color:var(--ink-2)}
+
+/* ========== 顶部导航 ========== */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:#fff;
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
+.nav{
+  display:flex;align-items:center;gap:24px;
+  height:64px;
+}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand-mark{width:40px;height:auto;display:block}
+.brand-name{font-weight:700;letter-spacing:.08em}
+
+.main-nav{margin-left:auto;display:flex;gap:28px}
+.main-nav a{
+  text-decoration:none;color:var(--ink-2);
+  padding:6px 2px;border-bottom:2px solid transparent;
+}
+.main-nav a:hover{color:var(--ink);border-color:var(--ink)}
+
+/* 社交图标 */
+.social{display:flex;gap:18px;align-items:center;margin-left:12px}
+.social img{width:26px;height:26px;display:block;filter:none}
+.social a{opacity:.9;transition:.2s}
+.social a:hover{opacity:1;transform:translateY(-1px)}
+
+/* 右上角装饰花纹 */
+.corner-ornament{
+  position:fixed; /* 固定在视口右上角 */
+  right:0; top:0;
+  width:min(32vw, 360px);
+  max-width:420px;
+  opacity:.18;
+  pointer-events:none; /* 不挡点击 */
+  z-index:1;
+}
+
+/* ========== Hero ========== */
+.hero{
+  position:relative;
+  height:min(68vh, 680px);
+  background: center/cover no-repeat var(--hero, none);
+}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to bottom, rgba(255,255,255,.0) 60%, rgba(255,255,255,1) 100%);
+}
+
+/* ========== 栅格 ========== */
+.grid.two{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:32px;
+}
+@media (max-width: 900px){
+  .grid.two{grid-template-columns:1fr}
+}
+
+/* 图片修饰 */
+.shadow{
+  box-shadow:0 12px 30px rgba(0,0,0,.12);
+}
+.round{border-radius:10px}
+.logo-mark-wrap{display:flex;justify-content:center;align-items:center}
+.logo-mark-big{max-width:360px;width:70%;min-width:220px;opacity:.9}
+
+/* 图标行 */
+.icons-row{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:20px;
+}
+.icon-item{display:flex;flex-direction:column;align-items:center;gap:8px}
+.icon-item img{height:56px;width:auto;display:block}
+.icon-item small{color:var(--ink-2)}
+
+/* ========== Footer ========== */
+.site-footer{
+  background:#fff;border-top:1px solid rgba(0,0,0,.08);
+  padding:56px 0;
+}
+.footer-inner{display:flex;gap:24px;align-items:center;justify-content:center;flex-wrap:wrap;text-align:center}
+.footer-mark{width:40px}
+.copy p{margin:2px 0;color:var(--ink-2);font-size:14px}
