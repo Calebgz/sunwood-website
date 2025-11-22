@@ -122,12 +122,12 @@ p {
   border-bottom: 1px solid #eee;
 }
 
-/* 左侧 Logo */
+
 .logo img {
   height: 48px;
 }
 
-/* 中间导航链接 */
+
 .nav-links {
   display: flex;
   gap: 40px;
@@ -145,7 +145,6 @@ p {
   color: #888;
 }
 
-/* 右侧社交图标 */
 .social-icons {
   display: flex;
   align-items: center;
@@ -185,12 +184,8 @@ p {
   transform: scale(1.15);
   opacity: 0.85;
 }
-/* 顶栏图标样式 */
-.social {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-}
+
+
 
 .social img{
   width: 28px;        
@@ -258,20 +253,17 @@ p{margin:0 0 12px;color:var(--ink-2)}
 }
 .main-nav a:hover{color:var(--ink);border-color:var(--ink)}
 
-/* 社交图标 */
-.social{display:flex;gap:18px;align-items:center;margin-left:12px}
 .social img{width:26px;height:26px;display:block;filter:none}
 .social a{opacity:.9;transition:.2s}
 .social a:hover{opacity:1;transform:translateY(-1px)}
 
-/* 右上角装饰花纹 */
 .corner-ornament{
-  position:fixed; /* 固定在视口右上角 */
+  position:fixed; 
   right:0; top:0;
   width:min(32vw, 360px);
   max-width:420px;
   opacity:.18;
-  pointer-events:none; /* 不挡点击 */
+  pointer-events:none; 
   z-index:1;
 }
 
@@ -320,3 +312,619 @@ p{margin:0 0 12px;color:var(--ink-2)}
 .footer-inner{display:flex;gap:24px;align-items:center;justify-content:center;flex-wrap:wrap;text-align:center}
 .footer-mark{width:40px}
 .copy p{margin:2px 0;color:var(--ink-2);font-size:14px}
+
+
+/* ========== Gallery 画廊样式 ========== */
+.gallery-header {
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-spacer {
+  height: 80px; /* 家具和礼品之间的间距 */
+}
+
+.gallery-grid {
+  display: grid;
+  /* 自动排版：每列最小300px，放不下自动换行 */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.gallery-item {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 260px; /* 固定高度，保证整齐 */
+  object-fit: cover; /* 裁切图片填满，不变形 */
+  display: block;
+}
+
+/* 礼品卡片的文字描述 */
+.gallery-caption {
+  padding: 20px;
+  text-align: center;
+}
+
+.gallery-caption h3 {
+  font-size: 18px;
+  margin: 0 0 6px 0;
+  color: var(--text);
+}
+
+.gallery-caption p {
+  font-size: 14px;
+  margin: 0;
+  color: var(--muted);
+}
+
+.social img {
+  height: 25px;
+  width: 25px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.social img:hover {
+  transform: scale(1.15);
+}
+
+
+
+
+.logo-icon {
+  height: 60px; /* 调整Logo大小 */
+  width: auto;
+}
+
+.logo-text {
+  height: 20px; /* 让SUNWOOD文字比例协调 */
+  width: auto;
+}
+
+
+.logo-container img {
+  display: block;
+}
+
+.logo-icon {
+  height: 70px; /* Logo 大小 */
+  width: auto;
+}
+
+.logo-text {
+  height: 22px; /* SUNWOOD.svg 比例 */
+  width: auto;
+}
+
+
+.logo-container img {
+  display: block;
+}
+
+.logo-icon {
+  height: 70px;
+  width: auto;
+}
+
+.logo-text {
+  height: 22px;
+  width: auto;
+}
+
+/* 全屏右上角花纹背景 */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./assets/SVG/Topright.svg') no-repeat top right;
+  background-size: cover; /* 让花纹铺满整个屏幕 */
+  opacity: 0.08; /* 透明度柔和 */
+  z-index: -1;
+  pointer-events: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* 👈 不再居中 */
+  padding: 20px 60px;
+  border-bottom: 2px solid black;
+}
+
+/* Logo 区域稍微右边留一点空隙 */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 50px; /* 👈 调整 Logo 和导航间距 */
+}
+/* 🌟 新增：强制电脑端 Logo 内部的图片和文字居中对齐 */
+.logo-container a {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 让图标和文字垂直居中 */
+  text-decoration: none;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px; /* 👈 控制导航文字间距 */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+/* 保证右侧社交图标仍然在右边 */
+.social {
+  margin-left: auto; /* 👈 把图标推到最右 */
+  display: flex;
+  gap: 20px;
+}
+.large-photo {
+  width: 100%;
+  height: auto;
+  margin: 30px 0;
+  display: block;
+}
+
+.about-text {
+  margin: 40px 0;
+}
+/* 1️⃣ 单独给 #who 减少顶部间距 */
+#who.section {
+  padding-top: 0px;   /* 原来是 72px，自己觉得合适可以再微调 */
+  padding-bottom: 60px; /* 底部保持舒服一点的间距 */
+}
+
+/* 2️⃣ 第一张大图紧贴一点上方 */
+#who .large-photo:first-of-type {
+  margin-top: 8px;     /* 原来是 30px */
+  margin-bottom: 30px; /* 下面的间距可以保持不变 */
+}
+
+/* Who Are We 区块布局 */
+#who {
+  padding: 80px 0;
+}
+
+.who-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+/* 左边文字区域 */
+.who-text {
+  flex: 1.1;
+}
+
+.who-text h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.who-text p + p {
+  margin-top: 10px;
+}
+
+/* 右边图片区域 */
+.who-photo {
+  flex: 1;
+  margin: 0;
+}
+
+.who-photo img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+  object-fit: cover;
+}
+
+/* 小屏幕下改为上下堆叠 */
+@media (max-width: 900px) {
+  .who-inner {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .who-photo {
+    max-width: 100%;
+  }
+}
+
+/* 关于我们区块：减少顶部空白，让第一张图更靠近导航 */
+.who-section {
+  padding-top: 24px;      /* 原来 .section 是 72px，上面会舒服很多 */
+}
+
+/* 控制两张大图的上下间距 */
+.who-section .large-photo {
+  display: block;
+  width: 100%;
+  margin: 16px 0 32px;    /* 上 16px，下 32px，你可以按眼缘再微调 */
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;  /* 左右比例：左稍微宽一点 */
+  gap: 40px;
+  align-items: center;
+}
+
+.about-text {
+  max-width: 95%;
+}
+
+.about-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 缩小 Who Are We 底部留白 */
+#who.section {
+  padding-bottom: 20px;
+}
+
+/* 缩小 Story 区域顶部留白 */
+#story.section {
+  padding-top: 10px;
+}
+
+
+/* =========================================
+   📱 移动端与平板适配 (Mobile & Tablet Fix)
+   断点提高到 1100px，提前进入竖排模式，防止挤压
+   ========================================= */
+@media (max-width: 1100px) {
+
+  /* 1. 容器与基础设置 */
+  .container {
+    padding: 0 24px;
+  }
+
+  /* 2. 导航栏强制改为竖排 (解决图标消失问题) */
+  header {
+    flex-direction: column; /* 竖直排列 */
+    align-items: center;    /* 居中对齐 */
+    padding: 20px 10px;     /* 减少内边距 */
+    height: auto;           /* 高度自适应 */
+  }
+
+/* 3. Logo 区域与大小锁定 (解决Logo变小问题) */
+  .logo-container {
+    margin: 0 0 15px 0 !important; /* 🌟 重点：强制把右边距设为0，不能光写 margin-right */
+    padding: 0 !important;
+    width: 100% !important;        /* 让容器占满整行，才能找准中心点 */
+    display: flex !important;      /* 开启 Flex 布局 */
+    justify-content: center !important; /* 内部元素居中 */
+    align-items: center !important;
+  }
+  
+  /* 新增：确保里面的链接块也老老实实居中 */
+  .logo-container a {
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  /* 强制放大/固定 Logo 图标大小 */
+  .logo-icon {
+    height: 75px !important; 
+    width: auto !important;
+    max-width: none !important;
+  }
+  
+  /* 强制固定 Logo 文字大小 */
+  .logo-text {
+    height: 24px !important;
+    width: auto !important;
+    margin-top: 5px;
+  }
+
+  /* 4. 菜单栏布局 (解决 Contact us 换行问题) */
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    padding: 0;
+    margin: 5px 0 20px 0;
+    display: flex;
+    flex-wrap: wrap;        /* 允许换行 */
+    justify-content: center;/* 居中 */
+    gap: 20px;              /* 缩小文字间距 */
+    width: 100%;
+  }
+  
+  nav ul li {
+    list-style: none;
+  }
+
+  /* 禁止文字内部换行，强制一行显示 */
+  nav ul li a {
+    white-space: nowrap;    /* 🌟 关键：禁止 "Contact us" 断开 */
+    font-size: 16px;        /* 字体稍微调整 */
+  }
+
+  /* 5. 社交图标 */
+  .social {
+    margin-left: 0;         /* 取消靠右 */
+    width: 100%;
+    justify-content: center;/* 居中 */
+    gap: 25px;              /* 图标间距 */
+  }
+
+  /* 6. 内容区域布局：单列显示 */
+  .about-grid, 
+  .grid.two,
+  .who-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* 图片显示在文字上方 */
+  .about-img, .who-photo {
+    order: -1; 
+  }
+  
+  /* 7. 调整标题大小 */
+  h1 { font-size: 28px; }
+  h2 { font-size: 24px; }
+}
+
+/* =========================================
+   📱 完美居中修正版 (Perfect Center Fix)
+   清除所有继承的边距，确保绝对居中
+   ========================================= */
+@media (max-width: 1100px) {
+
+  /* 1. 容器与Header基础 */
+  .container {
+    padding: 0 20px;
+  }
+
+  header {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 20px 0 !important; /* 减少左右内边距干扰 */
+    height: auto !important;
+  }
+
+  /* 2. Logo 彻底归零 */
+  .logo-container {
+    margin: 0 0 15px 0 !important; /* 清除右边距，只留底部间距 */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* 锁定 Logo 大小 */
+  .logo-icon {
+    height: 75px !important;
+    width: auto !important;
+    max-width: none !important;
+  }
+  .logo-text {
+    height: 24px !important;
+    width: auto !important;
+    margin-top: 5px;
+  }
+
+  /* 3. 菜单栏 (清除文字两侧的隐形边距) */
+  nav {
+    width: 100% !important;
+  }
+
+  nav ul {
+    padding: 0 !important;
+    margin: 0 0 20px 0 !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 25px !important; /* 控制文字间距 */
+    width: 100% !important;
+  }
+  
+  nav ul li {
+    list-style: none !important;
+  }
+
+  /* 🌟 关键修复：清除文字链接自带的左右边距 */
+  nav ul li a {
+    margin: 0 !important; /* 之前是 margin: 0 12px，这里必须归零 */
+    font-size: 16px;
+    white-space: nowrap;
+  }
+
+  /* 4. 社交图标 (清除图标左侧的隐形边距) */
+  .social {
+    margin: 0 !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    gap: 30px !important;
+  }
+
+  /* 🌟 关键修复：清除图标自带的左边距 */
+  .social a {
+    margin-left: 0 !important; /* 之前是 10px，导致向右歪，这里必须归零 */
+    font-size: 24px; /* 稍微放大一点点方便点击 */
+  }
+
+  /* 5. 内容布局 */
+  .about-grid, 
+  .grid.two,
+  .who-inner {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
+
+  .about-img, .who-photo {
+    order: -1; 
+  }
+
+  h1 { font-size: 28px; }
+  h2 { font-size: 24px; }
+  /* ... 放在 @media (max-width: 1100px) 的大括号里面 ... */
+
+  /* Footer 修复：解决底部信息不居中的问题 */
+  .footer-inner {
+    flex-direction: column !important; /* 强制竖排，Logo在上，文字在下 */
+    gap: 15px !important;              /* 调整间距 */
+  }
+
+  /* 修复 Logo 隐形的问题 */
+  .site-footer img.footer-mark {
+    filter: none !important;           /* 关键：取消反色，让 Logo 变回黑色可见 */
+    margin: 0 !important;              /* 清除多余边距 */
+    width: 50px !important;            /* 确保大小合适 */
+  }
+  
+  .copy {
+    text-align: center !important;     /* 确保文字绝对居中 */
+    width: 100%;
+  }
+}
+
+/* =========================================
+   ✨ 画廊优化补丁 (Gallery Fixes)
+   1. 加深小字颜色
+   2. 让卡片居中对齐，解决右下角空缺
+   ========================================= */
+
+/* 1. 修复：加深描述文字颜色，稍微加粗 */
+.gallery-caption p {
+  color: #333 !important; /* 把浅灰改成深灰，清晰可见 */
+  font-weight: 500;       /* 稍微加一点点粗度 */
+  opacity: 0.9;           /* 降低一点点透明感 */
+}
+
+/* 2. 修复：把 Grid 布局改为 Flex 居中布局 */
+.gallery-grid {
+  display: flex !important;      /* 覆盖原来的 grid */
+  flex-wrap: wrap !important;    /* 允许换行 */
+  justify-content: center !important; /* 🌟 核心：让所有卡片居中！ */
+  gap: 24px;
+}
+
+/* 让卡片尺寸更舒服 */
+.gallery-item {
+  flex: 1 1 280px;      /* 基础宽度280px，允许自动变宽填满空隙 */
+  max-width: 380px;     /* 限制最大宽度，防止最后两个卡片变得太巨大 */
+  width: auto;
+}
+
+/* 针对纯图片（家具那一部分）的微调 */
+.gallery-item img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+/* ================= Contact Section 样式 ================= */
+.contact-grid {
+  display: grid;
+  /* 自动适应：每列最窄300px，放不下就换行 */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.contact-card {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  height: 100%; /* 让三个卡片高度保持一致 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.contact-card .icon-box {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.contact-card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: var(--text);
+}
+
+.contact-card p {
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  margin-top: 0;
+}
+
+.contact-card a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-card a:hover {
+  color: var(--accent);
+}
+
+/* WhatsApp 按钮样式 */
+.whatsapp-btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #25D366;
+  color: white !important;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+  background-color: #1ebc57;
+  color: white !important;
+}

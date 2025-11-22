@@ -5,62 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sunwood — Premium Chinese Classical Rosewood</title>
   <meta name="description" content="Sunwood: premium Chinese classical rosewood furniture and handcrafted gifts. Factory stories, craftsmanship, and product showcases." />
+  <link rel="icon" type="image/svg+xml" href="./assets/SVG/Logo.svg" />
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body id="top">
-  <!-- 右上角装饰花纹（固定在页面右上角，随滚动） -->
-  <img class="corner-ornament" src="./assets/SVG/Topright.svg" alt="" aria-hidden="true" />
+ 
+ <header>
+  <div class="logo-container">
+    <a href="index.html">
+      <img src="./assets/SVG/Logo.svg" alt="Sunwood Logo" class="logo-icon">
+      <img src="./assets/SVG/SUNWOOD.svg" alt="Sunwood Text" class="logo-text">
+    </a>
+  </div>
 
-  <!-- 顶部导航 -->
-  <header class="site-header">
-    <div class="container nav">
-      <a href="#top" class="brand" aria-label="Sunwood Home">
-        <img class="brand-mark" src="./assets/SVG/Logo.svg" alt="Sunwood Logo" />
-        <span class="brand-name">SUNWOOD</span>
-      </a>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#about">Contact us</a></li>
+      <li><a href="#contact"></a></li>
+    </ul>
+  </nav>
 
-      <nav class="main-nav">
-        <a href="#top">Home</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact us</a>
-      </nav>
+  <div class="social">
+    <a href="https://v.douyin.com/HS22Io8q8fQ/" target="_blank" rel="noopener" aria-label="Douyin">
+      <img src="./assets/SVG/tik.svg" alt="Douyin" />
+    </a>
+    
+    <a href="https://www.instagram.com/sunwoodltd" target="_blank" rel="noopener" aria-label="Instagram">
+      <img src="./assets/SVG/ins.svg" alt="Instagram" />
+    </a>
 
-      <!-- 右侧社交图标 -->
-      <div class="social">
-        <a href="https://v.douyin.com/HS22Io8q8fQ/" target="_blank" rel="noopener" aria-label="Douyin / TikTok China">
-          <img src="./assets/SVG/tik.svg" alt="Douyin" />
-        </a>
-        <a href="https://xhslink.com/m/mPn7f6Z7ul" target="_blank" rel="noopener" aria-label="Xiaohongshu">
-          <img src="./assets/SVG/xhs.svg" alt="Xiaohongshu" />
-        </a>
-        <a href="https://b23.tv/IujB6fl" target="_blank" rel="noopener" aria-label="Bilibili">
-          <img src="./assets/SVG/bilibili.svg" alt="Bilibili" />
-        </a>
-      </div>
+    <a href="https://www.youtube.com/@sunwoodltd/" target="_blank" rel="noopener" aria-label="YouTube">
+      <img src="./assets/SVG/yt.svg" alt="YouTube" />
+    </a>
+  </div>
+</header>
+
+
+<section id="who" class="section">
+
+  <div class="who-hero">
+    <img 
+      class="shadow round large-photo" 
+      src="./assets/images/zhutu.png" 
+      alt="Sunwood showroom" 
+    />
+  </div>
+
+  <div class="container about-grid">
+    
+    <div class="about-text">
+      <h2>Who Are We</h2>
+      <p>Sunwood, based in Liaoning, China, is a leading supplier of premium Chinese classical rosewood furniture and fine handcrafted rosewood gifts.</p>
+      <p>We operate a showroom exceeding 100,000 sq ft and have been dedicated to fine wood craftsmanship for over two decades, blending traditional Chinese aesthetics with modern elegance.</p>
+      <p>Sunwood owns several original design patents for rosewood gift collections and operates its own manufacturing facilities, ensuring exceptional quality and authenticity in every creation.</p>
     </div>
-  </header>
 
-  <!-- 顶部大图（Hero） -->
-  <section class="hero" style="--hero:url('./assets/images/hero.jpg');">
-    <div class="hero-overlay"></div>
-  </section>
-
-  <!-- 关于我们 -->
-  <section id="who" class="section">
-    <div class="container grid two">
-      <div>
-        <h2>Who Are We</h2>
-        <p>Sunwood, based in Liaoning, China, is a leading supplier of premium Chinese classical rosewood furniture and fine handcrafted rosewood gifts.</p>
-        <p>We operate a showroom exceeding 100,000 sq ft and have been dedicated to fine wood craftsmanship for over two decades, blending traditional Chinese aesthetics with modern elegance.</p>
-        <p>Sunwood owns several original design patents for rosewood gift collections and operates its own manufacturing facilities, ensuring exceptional quality and authenticity in every creation.</p>
-      </div>
-      <div>
-        <img class="shadow round" src="./assets/images/factory.jpg" alt="Sunwood showroom / factory" />
-      </div>
+    <div class="about-img">
+      <img 
+        class="shadow round large-photo" 
+        src="./assets/images/citu.png" 
+        alt="Sunwood factory building" 
+      />
     </div>
-  </section>
 
-  <!-- Logo 故事 -->
+  </div>
+</section>
+
+
   <section id="story" class="section">
     <div class="container grid two">
       <div>
@@ -94,15 +107,134 @@
     </div>
   </section>
 
-  <!-- Gallery 占位（后续你加图即可） -->
-  <section id="gallery" class="section section-muted">
+ <section id="gallery" class="section section-muted">
     <div class="container">
-      <h2>Gallery</h2>
-      <p>Coming soon — curated product shots and project showcases.</p>
+      
+      <div class="gallery-header">
+        <h2>Rosewood Furniture Collection</h2>
+        <p>Exquisite craftsmanship for the modern home.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="./assets/images/gallery/jiaju1.jpg" loading="lazy" alt="Rosewood Furniture"></div>
+        <div class="gallery-item"><img src="./assets/images/gallery/jiaju2.jpg" loading="lazy" alt="Rosewood Furniture"></div>
+        <div class="gallery-item"><img src="./assets/images/gallery/jiaju3.jpg" loading="lazy" alt="Rosewood Furniture"></div>
+        <div class="gallery-item"><img src="./assets/images/gallery/jiaju4.jpg" loading="lazy" alt="Rosewood Furniture"></div>
+        <div class="gallery-item"><img src="./assets/images/gallery/jiaju5.jpg" loading="lazy" alt="Rosewood Furniture"></div>
+        <div class="gallery-item"><img src="./assets/images/gallery/jiaju6.jpg" loading="lazy" alt="Rosewood Furniture"></div>
+        <div class="gallery-item"><img src="./assets/images/gallery/jiaju7.jpg" loading="lazy" alt="Rosewood Furniture"></div>
+        <div class="gallery-item"><img src="./assets/images/gallery/jiaju8.jpg" loading="lazy" alt="Rosewood Furniture"></div>
+        <div class="gallery-item"><img src="./assets/images/gallery/jiaju9.jpg" loading="lazy" alt="Rosewood Furniture"></div>
+        <div class="gallery-item"><img src="./assets/images/gallery/jiaju10.jpg" loading="lazy" alt="Rosewood Furniture"></div>
+        <div class="gallery-item"><img src="./assets/images/gallery/jiaju11.jpg" loading="lazy" alt="Rosewood Furniture"></div>
+      </div>
+
+      <div class="gallery-spacer"></div>
+
+      <div class="gallery-header">
+        <h2>Rosewood Gifts & Accessories</h2>
+        <p>Traditional elegance, perfect for gifting.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item card">
+          <img src="./assets/images/gallery/lp1.jpg" loading="lazy" alt="Rosewood Basket">
+          <div class="gallery-caption">
+            <h3>Multi-functional Basket</h3>
+            <p>Handcrafted rosewood storage.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item card">
+          <img src="./assets/images/gallery/lp2.jpg" loading="lazy" alt="DIY Chair">
+          <div class="gallery-caption">
+            <h3>DIY Assembly Chair</h3>
+            <p>Experience the joy of joinery.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item card">
+          <img src="./assets/images/gallery/lp3.jpg" loading="lazy" alt="Stationery Set">
+          <div class="gallery-caption">
+            <h3>Scholar's Stationery Set</h3>
+            <p>Traditional elegance (Boxed).</p>
+          </div>
+        </div>
+
+        <div class="gallery-item card">
+          <img src="./assets/images/gallery/lp4.jpg" loading="lazy" alt="Chopsticks">
+          <div class="gallery-caption">
+            <h3>Premium Chopsticks</h3>
+            <p>Authentic rosewood dining.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item card">
+          <img src="./assets/images/gallery/lp5.jpg" loading="lazy" alt="Stationery Set Display">
+          <div class="gallery-caption">
+            <h3>Scholar's Stationery Set</h3>
+            <p>Exquisite desk display.</p>
+          </div>
+        </div>
+        <div class="gallery-item card" style="background: #f9f9f9; display: flex; flex-direction: column; justify-content: center; align-items: center; cursor: pointer;" onclick="location.href='#contact'">
+          <div style="padding: 40px 20px; text-align: center;">
+            <h3 style="color: #bfa37a; font-size: 24px;">Custom Order</h3>
+            <p style="color: #555;">Looking for something unique?<br>Contact us for bespoke designs.</p>
+            <span style="display: inline-block; margin-top: 15px; padding: 8px 20px; background: #111; color: #fff; border-radius: 20px; font-size: 14px;">Contact Us</span>
+          </div>
+        </div>
+      </div>
+
+
     </div>
   </section>
 
-  <!-- Footer -->
+<section id="about" class="section" style="background-color: #f9f9f9;">
+    <div class="container">
+      
+      <div class="gallery-header">
+        <h2>Visit Our Showroom</h2>
+        <p>We welcome you to experience the quality of Sunwood rosewood.</p>
+      </div>
+
+      <div class="contact-grid">
+        
+        <div class="contact-card">
+          <div class="icon-box">📍</div>
+          <h3>Address</h3>
+          <p><strong>Liaoning Lisen Trading Co., Ltd.</strong></p>
+          <p>No. 125-2 Hushitai North Street</p>
+          <p>Shenbei New District, Shenyang City</p>
+          <p>Liaoning Province, P.R. China</p>
+          <p>Post Code: 110000</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="icon-box">📞</div>
+          <h3>Contact Us</h3>
+          <p><strong>Email:</strong> <a href="mailto:info@sunwood.ltd">info@sunwood.ltd</a></p>
+          <p><strong>Mobile / WhatsApp:</strong></p>
+          <p>+852 4471 1599</p>
+          
+          <a href="https://wa.me/85244711599" target="_blank" class="whatsapp-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="20" style="display:inline; margin:0;">
+            Chat on WhatsApp
+          </a>
+        </div>
+
+        <div class="contact-card">
+          <div class="icon-box">🕒</div>
+          <h3>Business Hours</h3>
+          <p><strong>Mon - Sun:</strong></p>
+          <p>9:00 AM - 6:00 PM</p>
+          <br>
+          <p style="color: #bfa37a; font-size: 14px;">* Appointments Recommended</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <footer id="contact" class="site-footer">
     <div class="container footer-inner">
       <img class="footer-mark" src="./assets/SVG/Logo.svg" alt="Sunwood logo">
